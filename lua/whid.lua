@@ -56,7 +56,8 @@ local function open_window()
   api.nvim_win_set_option(win, 'cursorline', true) -- it highlight line with the cursor on it
 
   -- we can add title already here, because first line will never change
-  api.nvim_buf_set_lines(buf, 0, -1, false, { center('The files with the last commits'), '', ''})
+  api.nvim_buf_set_lines(buf, 0, -1, false, { center([[Files with recent commits
+use 'h' and 'l' no navigate and 'Enter' to open file]]), '', ''})
   api.nvim_buf_add_highlight(buf, -1, 'WhidHeader', 0, 0, -1)
 end
 
